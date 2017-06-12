@@ -1,0 +1,16 @@
+AppBundle\Entity\User:
+  type: entity
+  table: user
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 55
+      unique: false
+    email:
+      type: string
+      length: 55
+      unique: true
