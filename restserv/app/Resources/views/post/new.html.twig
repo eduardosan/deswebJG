@@ -1,16 +1,85 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <h1>Post creation</h1>
+<!doctype html>
+<html lang="en">
 
+
+<head>
+    <meta charset="utf-8">
+    <title>Promo App</title>
+    <meta name="description" content="Slideshow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/postindexstyle.css">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    
+    <style>
+        .col-xs-12 {
+            background-color: #ccc;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header style="height:30px">
+         <div class="container-fluid" style="height:30px"> <!-- Mini-header -->
+             <div class ="row" style="height:30px">
+                 <div class="col-xs-12 col-sm-12 jumbotron" style="height:30px; margin-bottom: 0px; padding: 0px;">
+                     <div class="col-xs-2 col-sm-2" style="padding: 0px;">
+                         <button type="button" class="btn-default post_button" style="padding: 4px 4px;"><a href="{{path('post_create')}}" class="postbtn_create" style="">
+                         </a></button>
+                     </div>
+                         <p style="text-align: center; margin-bottom: 0px; padding-right: 133.33px;">Promo App</p>
+                 </div>
+             </div>
+         </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-xs-12 col-sm-12">
     {{ form_start(form) }}
+            </div>
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('post_index') }}">Back to the list</a>
+            <a href="{{ path('homepage') }}">Back to the list</a>
         </li>
     </ul>
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

@@ -18,3 +18,4 @@ AppBundle\Entity\Post:
       length: 300
     comment:
       type: text
+      nullable: true

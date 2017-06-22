@@ -17,7 +17,7 @@ class UserController extends Controller
     /**
      * Lists all user entities.
      *
-     * @Route("/", name="user_index")
+     * @Route("/users", name="user_list")
      * @Method("GET")
      */
     public function indexAction()
@@ -34,10 +34,10 @@ class UserController extends Controller
     /**
      * Creates a new user entity.
      *
-     * @Route("/new", name="user_new")
+     * @Route("/user/create", name="user_create")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function createAction(Request $request)
     {
         $user = new User();
         $form = $this->createForm('AppBundle\Form\UserType', $user);

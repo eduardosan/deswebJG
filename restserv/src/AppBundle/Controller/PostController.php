@@ -5,19 +5,20 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Post controller.
  *
- * @Route("post")
+ * @Route("/")
  */
 class PostController extends Controller
 {
     /**
      * Lists all post entities.
      *
-     * @Route("/", name="post_index")
+     * @Route("/posts", name="post_list")
      * @Method("GET")
      */
     public function indexAction()
@@ -34,8 +35,8 @@ class PostController extends Controller
     /**
      * Creates a new post entity.
      *
-     * @Route("/new", name="post_new")
-     * @Method({"GET", "POST"})
+     * @Route("/post/create", name="post_create")
+     * @Method({"POST","GET"})
      */
     public function newAction(Request $request)
     {
@@ -60,7 +61,7 @@ class PostController extends Controller
     /**
      * Finds and displays a post entity.
      *
-     * @Route("/{id}", name="post_show")
+     * @Route("/post/list{id}", name="post_show")
      * @Method("GET")
      */
     public function showAction(Post $post)
